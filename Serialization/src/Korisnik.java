@@ -18,4 +18,13 @@ public class Korisnik implements Serializable {
         this.country = country;
     }
 
+    @Override
+    public String toString() {
+        return "Korisnik{" +
+                "name='" + name + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", age=" + age +
+                ", country='" + country + '\'' +
+                '}';
+    }
 }
