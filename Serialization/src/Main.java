@@ -3,11 +3,14 @@ import java.io.*;
 public class Main {
     public static void main(String[] args) throws IOException, ClassNotFoundException {
 
+        Korisnik ivan = new Korisnik("Ivan", "Ivic", 35,"Croatia");
+
+        // Creating an output stream to a file AND
         FileOutputStream fos = new FileOutputStream("korisnik.txt");
         ObjectOutputStream oos = new ObjectOutputStream(fos);
 
         oos.writeObject("User One");
-        oos.writeObject( new Korisnik("Ivan", "Ivic", 35,"Croatia"));
+        oos.writeObject(ivan);
         oos.close();
 
         FileInputStream fis = new FileInputStream("korisnik.txt");
